@@ -9,8 +9,7 @@ defineProps({
 </script>
 
 <template>
-    <div :class="`${bg} p-6 rounded-lg shadow-md`">    
-        <slot></slot>
-    </div>
-
+  <div :class="`${bg} p-6 rounded-lg shadow-md`">    
+    <slot />
+  </div>
 </template>
