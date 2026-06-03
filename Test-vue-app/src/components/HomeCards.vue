@@ -1,12 +1,12 @@
 <script setup>
-import CardContainer from './CardContainer.vue';
+import Cards from './CardContainer.vue';
 </script>
 
 <template>
   <section class="py-4">
     <div class="container-xl lg:container m-auto">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg">
-        <CardContainer class="bg-gray-100 p-6 rounded-lg shadow-md">
+        <Cards class="bg-gray-100 p-6 rounded-lg shadow-md">
           <h2 class="text-2xl font-bold">
             For Developers
           </h2>
@@ -19,8 +19,8 @@ import CardContainer from './CardContainer.vue';
           >
             Browse Jobs
           </a>
-        </CardContainer>
-        <CardContainer bg="bg-green-100">
+        </Cards>
+        <Cards bg="bg-green-100">
           <h2 class="text-2xl font-bold">
             For Employers
           </h2>
@@ -33,7 +33,7 @@ import CardContainer from './CardContainer.vue';
           >
             Add Job
           </a>
-        </CardContainer>
+        </Cards>
       </div>
     </div>
   </section>
