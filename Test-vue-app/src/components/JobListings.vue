@@ -1,9 +1,18 @@
 <script setup>
-import jobData from '../jobs.json'
-import { ref } from 'vue'
+import { ref, onMounted} from 'vue'
 import SingleJobListings from './SingleJobListings.vue';
+import axios from 'axios';
 
-const jobs = ref(jobData.jobs)
+const jobs = ref([])
+onMounted(async () =>{
+  try {
+    const response = await axios.get('http://localhost:8000/jobs');
+    jobs.value = response.data;
+  } catch (error) {
+    console.error('error Fetching jobs', error);
+    
+  }
+});
 </script>
 
 <template>
